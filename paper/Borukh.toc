@@ -1,0 +1,10 @@
+\babel@toc {ukrainian}{}
+\contentsline {section}{Вступ}{3}{Doc-Start}%
+\contentsline {section}{\numberline {1}Постановка задачі}{4}{section.1}%
+\contentsline {section}{\numberline {2}Вхідні дані та їх обробка}{5}{section.2}%
+\contentsline {section}{\numberline {3}Глибокі нейронні мережі}{6}{section.3}%
+\contentsline {section}{\numberline {4}Модель}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Датасет}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Тренування моделі}{7}{subsection.4.2}%
+\contentsline {section}{Висновки}{8}{subsection.4.2}%
+\contentsline {section}{Список літератури}{9}{section*.1}%

@@ -1,0 +1,238 @@
+\documentclass[a4paper, 14pt]{extarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english,ukrainian]{babel}
+\usepackage[T1, T2A]{fontenc}
+\usepackage{dsfont}
+\usepackage[export]{adjustbox}
+
+\usepackage{amssymb, amsmath}
+\usepackage{amsfonts}
+\usepackage{float}
+\restylefloat{table}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+\usepackage[small]{titlesec}
+
+\usepackage{epsfig}
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
+
+\usepackage[includeheadfoot, headheight=16pt]{geometry} 
+\geometry{left=2.5cm}
+\geometry{right=1cm}
+\geometry{bottom=2cm}
+\geometry{top=2cm}
+\geometry{headsep=0pt}
+%\renewcommand{\baselinestretch}{1.5}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\newcommand{\anonsection}[1]{\section*{#1}\addcontentsline{toc}{section}{#1}}
+
+\titleformat{\chapter}[display]
+{\normalfont\bfseries}{}{0pt}{\Large}
+
+
+\begin{document}
+\begin{titlepage}
+	
+%-----------------------------------------------------------------------------------	
+	
+	\newpage
+	\thispagestyle{empty}
+	\begin{center}
+		{
+			\large 
+			МІНІСТЕРСТВО ОСВІТИ І НАУКИ УКРАЇНИ
+			
+			ЛЬВІВСЬКИЙ НАЦІОНАЛЬНИЙ УНІВЕРСИТЕТ\\
+			ІМЕНІ ІВАНА ФРАНКА                            
+			\vspace{1cm}          
+			
+			Факультет прикладної математики та інформатики                     
+			
+			Кафедра обчислювальної математики
+			\vfill   			                       
+			
+			\textbf{{\LARGE Курсова робота}}\\[5mm]
+			
+			{\LARGE Підсумовування текстів\\
+				за допомогою глибоких\\[2mm]
+				нейронних мереж}
+			
+			\bigskip
+			
+		}
+	\end{center}
+    \vfill                                              
+	
+	
+	\newlength{\ML}
+	\settowidth{\ML}{«\underline{\hspace{0.7cm}}» \underline{\hspace{2cm}}}
+	\hfill\begin{minipage}{0.55\textwidth}
+		Виконав: студент 4-го курсу групи ПМп-41\\
+		спеціальності\\
+		\underline{\makebox[9.2cm]{113 - "Прикладна математика"\\\hfill}}
+		\underline{\makebox[9.2cm]{Борух М.І.\hfill}}
+	\end{minipage}%
+	\bigskip
+	
+	\hfill\begin{minipage}{0.55\textwidth}
+		Керівник\\
+		\underline{\makebox[9.2cm]{доцент Музичук Ю.А.\hfill}}
+	\end{minipage}%
+	\bigskip
+	
+	\hfill\begin{minipage}{0.55\textwidth}
+		Національна шкала\underline{\hspace{5cm}}\\\hfill
+		Кількість балів:\underline{\hspace{1.3cm}}
+			Оцінка: ECTS\underline{\hspace{1.3cm}}\\\hfill
+	\end{minipage}%
+	\bigskip
+	\bigskip
+	
+	\hfill\begin{minipage}{0.65\textwidth}
+		Члени комісії:\hspace{0.8cm} \underline{\hspace{2cm}}
+		\hspace{0.2cm} \underline{\hspace{4.5cm}}\\
+		
+		\hspace{3.8cm} \underline{\hspace{2cm}}
+		\hspace{0.2cm} \underline{\hspace{4.5cm}}\\
+		
+		\hspace{3.8cm} \underline{\hspace{2cm}}
+		\hspace{0.2cm} \underline{\hspace{4.5cm}}\\
+		
+	\end{minipage}%
+	\vfill                                                 
+	
+	\begin{center}                                                        
+		Львів - 2021                                                              
+	\end{center} 
+\end{titlepage}
+%-----------------------------------------------------------------------------------
+
+	\tableofcontents
+	\setcounter{page}{2}
+	
+%-----------------------------------------------------------------------------------
+
+	\newpage	
+	\anonsection{Вступ}
+	
+	\qquad У сьогоднійшній час, у відкритому доступі, є безліч статей різного вмісту. Здебільшого це середні або великі за обсягом роботи. Не завжди є можливість швидко дізнатися суть написаного за браком часу або бажання. Та все ж хотілося б бути в курсі опублікованого матеріалу. Можливість переглядати скорочений або підсумований текст була б чудовою, це допомогло б зменшити час на ознайомлення з новими матеріалами, також оптимізувати роботу пошукових сайтів, даючи можливість видавати більш точні результати. Все це має вплив на швидкість опрацювання інформації, можливість відділяти потрібне від другорядного. Враховуючи як стрімко наповнюється мережа новою інформацією, інструмент стискання тесту вже не є беззмістовною іграшкою.\\
+	
+	\noindent \qquad На сьогодні, нейронні мережі активно використовуюся у вирішенні таких задач. У даній роботі буде побудовано модель, яка вміє підсумовувати тест, а також розглянуто кроки для успішної реалізації задуманого.
+	
+%-----------------------------------------------------------------------------------
+	 
+	\newpage	
+	\section{Постановка задачі}
+	
+	\qquad Мета даної роботи дослідити та побудувати модель, що вміє підсумовувати тексти. Можна виділити такі етапи роботи:
+	\begin{enumerate}
+		\item Аналіз та обробка вхідних даних
+		\item Реалізація глибокої нейронної мережі
+		\item Побудова сумаризатора на основі даної мережі
+		\item Оцінка отриманих результатів
+	\end{enumerate} 
+
+		
+%--------------------------------------------------------------------------------------
+		
+	\newpage
+
+	\section{Вхідні дані та їх обробка}
+	
+	
+	
+%--------------------------------------------------------------------------------------
+
+	\newpage
+	\section{Глибокі нейронні мережі}
+	
+	
+ 	
+ 	
+%--------------------------------------------------------------------------------------
+
+	\newpage
+	\section{Модель}
+	\subsection{Датасет}
+	
+		
+	
+	\subsection{Тренування моделі}
+	
+	
+%--------------------------------------------------------------------------------------
+
+	
+	
+%--------------------------------------------------------------------------------------
+
+
+ 	\newpage
+ 	\anonsection{Висновки}
+ 	
+ 	
+ 	
+%--------------------------------------------------------------------------------------
+
+ 	\newpage
+ 	\phantomsection
+ 	\addcontentsline{toc}{section}{Список літератури}
+ 	\renewcommand\bibname{Список літератури}
+ 	\bibliography{plain}
+	\begin{thebibliography}{9}
+		\bibitem{datapreprocessing}
+			Matthew Mayo
+			\textit{A General Approach to Preprocessing Text Data }
+			\newline [Електронний ресурс] 
+			/ Mayo Matthew // KDnuggets.-2017.-
+			Режим доступу: https://www.kdnuggets.com/2017/12/general-approach-preprocessing-text-data.html
+			
+		\bibitem{lime_a}
+			Ribeiro, Marco Tulio, Sameer Singh, та Carlos Guestrin. 
+			\textit{\\“Why should I trust you?: Explaining the predictions of any classifier.” } \\2016. arXiv: 1602.04938 [cs.LG].
+			
+		\bibitem{eli5}
+			Mikhail Korobov, Konstantin Lopuhin
+			\textit{TextExplainer: debugging black-box text classifiers}
+			[Електронний ресурс] 
+			/ Korobov Mikhail, Lopuhin Konstantin // readthedocs.-2017.-
+			Режим доступу: https://eli5.readthedocs.io/en/latest/tutorials/black-box-text-classifiers.html
+			
+		\bibitem{anchors}
+			Marco Tulio Ribeiro, Sameer Singh, Carlos Guestrin
+			\textit{Anchors: High-Precision Model-Agnostic Explanations}, 2018
+			
+		\bibitem{anchors_a}
+			Christoph Molnar
+			\textit{Interpretable machine learning. A Guide for Making Black Box Models Explainable} / Molnar Christoph, 2020
+			
+		\bibitem{alibi}
+			Klaise, Janis i Van Looveren, Arnaud i Vacanti, Giovanni i Coca, Alexandru
+			\textit{Alibi: Algorithms for monitoring and explaining machine learning models}[Електронний ресурс] / github.-2020.- Режим доступу: https://github.com/SeldonIO/alibi
+			 
+		
+		
+	\end{thebibliography}
+
+%--------------------------------------------------------------------------------------
+
+\end{document}
