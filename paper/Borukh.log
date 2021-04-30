@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 2.9.7380 64-bit) (preloaded format=xelatex 2020.4.2)  21 FEB 2021 18:22
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 2.9.7380 64-bit) (preloaded format=xelatex 2020.4.2)  26 APR 2021 18:08
 entering extended mode
 **./Borukh.tex
 (Borukh.tex
@@ -733,51 +733,69 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
 
-[3] [4] [5] [6] [7] [8] (Borukh.bbl)
-Underfull \hbox (badness 3138) in paragraph at lines 203--208
-\TU/TimesNewRoman(0)/m/n/14.4 [Електронний ресурс] / Mayo Matthew // KDnuggets.
--2017.- Режим до-
+[3] [4]
+Overfull \hbox (17.21191pt too wide) in paragraph at lines 192--197
+ \TU/TimesNewRoman(0)/m/n/14.4 У попередній роботі розглядалися такі методи від
+бору ознак як: Count Vectorizer,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--219
-[]\TU/TimesNewRoman(0)/m/n/14.4 Mikhail Korobov, Konstantin Lopuhin \TU/TimesNe
-wRoman(0)/m/it/14.4 TextExplainer: debugging
+Underfull \hbox (badness 10000) in paragraph at lines 192--197
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--219
-\TU/TimesNewRoman(0)/m/it/14.4 black-box text classifiers \TU/TimesNewRoman(0)/
-m/n/14.4 [Електронний ресурс] / Korobov
+Underfull \hbox (badness 10000) in paragraph at lines 192--197
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 198--201
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--219
-\TU/TimesNewRoman(0)/m/n/14.4 Mikhail, Lopuhin Konstantin // readthedocs.-2017.
-- Режим доступу:
+Overfull \hbox (23.9678pt too wide) in paragraph at lines 221--223
+\TU/TimesNewRoman(0)/m/n/14.4 Google Word2Vec, Stanford GloVe Embeddings[[]]. В
+икористання вже пре-натренованих
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 238.
-[9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 238.
+[6]
+File: img/RNN_unrolled.pdf Graphic file (type pdf)
+<use img/RNN_unrolled.pdf>
+ [7] [8] [9] [10] (Borukh.bbl)
+Underfull \hbox (badness 2735) in paragraph at lines 291--296
+\TU/TimesNewRoman(0)/m/n/14.4 [Електронний ресурс] / Sharmila Polamuri // dataa
+spirant.com.-2020.- Ре-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--296
+\TU/TimesNewRoman(0)/m/n/14.4 жим доступу: https://dataaspirant.com/word-embedd
+ing-techniques-nlp/#t-
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 326.
+[11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 326.
  (Borukh.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 238.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 238.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 326.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 326.
 Package rerunfilecheck Info: File `Borukh.out' has not changed.
-(rerunfilecheck)             Checksum: A17981CC7AF17CAE470A89574629A4E2;590.
+(rerunfilecheck)             Checksum: F1CFF282305AE2ABE2BA9A9C97911897;918.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 238.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 326.
  ) 
 Here is how much of TeX's memory you used:
- 15157 strings out of 414187
- 273760 string characters out of 2901686
- 595832 words of memory out of 3000000
- 32461 multiletter control sequences out of 15000+200000
+ 15185 strings out of 414187
+ 274223 string characters out of 2901686
+ 600166 words of memory out of 3000000
+ 32486 multiletter control sequences out of 15000+200000
  536271 words of font info for 58 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 45i,11n,82p,751b,369s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,11n,82p,903b,369s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Borukh.pdf (9 pages).
+Output written on Borukh.pdf (11 pages).
