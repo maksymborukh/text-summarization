@@ -7,8 +7,8 @@
 \contentsline {section}{\numberline {3}Глибокі нейронні мережі}{7}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Рекурентна нейронна мережа}{7}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Long Short-Term Memory}{8}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Модель}{9}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Датасет}{9}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Тренування моделі}{9}{subsection.4.2}%
-\contentsline {section}{Висновки}{10}{subsection.4.2}%
-\contentsline {section}{Список літератури}{11}{section*.1}%
+\contentsline {section}{\numberline {4}Модель}{11}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Датасет}{11}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Тренування моделі}{11}{subsection.4.2}%
+\contentsline {section}{Висновки}{12}{subsection.4.2}%
+\contentsline {section}{Список літератури}{13}{section*.1}%
