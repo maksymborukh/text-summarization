@@ -6,8 +6,23 @@
 \BOOKMARK [1][-]{section.3}{Глибокі нейронні мережі}{}% 6
 \BOOKMARK [2][-]{subsection.3.1}{Рекурентна нейронна мережа}{section.3}% 7
 \BOOKMARK [2][-]{subsection.3.2}{Long\040Short-Term\040Memory}{section.3}% 8
-\BOOKMARK [1][-]{section.4}{Модель}{}% 9
-\BOOKMARK [2][-]{subsection.4.1}{Датасет}{section.4}% 10
-\BOOKMARK [2][-]{subsection.4.2}{Тренування моделі}{section.4}% 11
-\BOOKMARK [1][-]{subsection.4.2}{Висновки}{}% 12
-\BOOKMARK [1][-]{section*.1}{Список літератури}{}% 13
+\BOOKMARK [1][-]{section.4}{Датасет}{}% 9
+\BOOKMARK [2][-]{subsection.4.1}{Дані}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.2}{Використання даних}{section.4}% 11
+\BOOKMARK [1][-]{section.5}{Архітектура моделі}{}% 12
+\BOOKMARK [2][-]{subsection.5.1}{Підсумок за раз}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.2}{Рекурсивна модель 1}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.3}{Рекурсивна модель 2}{section.5}% 15
+\BOOKMARK [1][-]{section.6}{Генерація підсумків}{}% 16
+\BOOKMARK [2][-]{subsection.6.1}{Жадібний алгоритм}{section.6}% 17
+\BOOKMARK [2][-]{subsection.6.2}{Променевий пошук}{section.6}% 18
+\BOOKMARK [2][-]{subsection.6.3}{Випадковий спосіб}{section.6}% 19
+\BOOKMARK [2][-]{subsection.6.4}{Топ-k прикладів}{section.6}% 20
+\BOOKMARK [2][-]{subsection.6.5}{Метод ядер}{section.6}% 21
+\BOOKMARK [1][-]{section.7}{Тренування моделі}{}% 22
+\BOOKMARK [1][-]{section.8}{Результати}{}% 23
+\BOOKMARK [2][-]{subsection.8.1}{Приклади підсумків}{section.8}% 24
+\BOOKMARK [2][-]{subsection.8.2}{Аналіз отриманих підсумків}{section.8}% 25
+\BOOKMARK [2][-]{subsection.8.3}{Метрики ROUGE, BLEU}{section.8}% 26
+\BOOKMARK [1][-]{subsection.8.3}{Висновки}{}% 27
+\BOOKMARK [1][-]{section*.1}{Список літератури}{}% 28

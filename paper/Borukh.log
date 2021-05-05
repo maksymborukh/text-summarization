@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 2.9.7380 64-bit) (preloaded format=xelatex 2020.4.2)  3 MAY 2021 15:11
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 2.9.7380 64-bit) (preloaded format=xelatex 2020.4.2)  5 MAY 2021 19:42
 entering extended mode
 **./Borukh.tex
 (Borukh.tex
@@ -755,9 +755,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 198--201
  []
 
 
-Overfull \hbox (23.9678pt too wide) in paragraph at lines 221--223
-\TU/TimesNewRoman(0)/m/n/14.4 Google Word2Vec, Stanford GloVe Embeddings[[]]. В
-икористання вже пре-натренованих
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--206
+
  []
 
 [6]
@@ -767,49 +771,117 @@ File: img/RNN_unrolled.pdf Graphic file (type pdf)
 File: img/LSTM cell.pdf Graphic file (type pdf)
 <use img/LSTM cell.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 288--293
+Underfull \hbox (badness 10000) in paragraph at lines 288--294
 
  []
 
-[9] [10] [11] [12] (Borukh.bbl)
-Underfull \hbox (badness 2735) in paragraph at lines 332--337
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 299--300
+
+ []
+
+[10]
+File: img/dataset_2.pdf Graphic file (type pdf)
+<use img/dataset_2.pdf>
+File: img/text_len_1.pdf Graphic file (type pdf)
+<use img/text_len_1.pdf>
+ [11] [12]
+File: img/autoencoder.pdf Graphic file (type pdf)
+<use img/autoencoder.pdf>
+
+Overfull \hbox (7.62253pt too wide) in paragraph at lines 327--332
+\TU/TimesNewRoman(0)/m/n/14.4 модель, яка б надавала таку можливість. ”Послідов
+ність до послідовності”(seq2seq)
+ []
+
+File: img/One-Shot.pdf Graphic file (type pdf)
+<use img/One-Shot.pdf>
+[13]
+File: img/Model-A.pdf Graphic file (type pdf)
+<use img/Model-A.pdf>
+File: img/Model-B.pdf Graphic file (type pdf)
+<use img/Model-B.pdf>
+ [14] [15] [16]
+Overfull \hbox (11.74374pt too wide) in paragraph at lines 383--384
+\TU/TimesNewRoman(0)/m/n/14.4 щих $\OML/cmm/m/it/14.4 k$ \TU/TimesNewRoman(0)/m
+/n/14.4 слів $\OML/cmm/m/it/14.4 V[] \OMS/cmsy/m/n/14.4 ^^Z \OML/cmm/m/it/14.4 
+V$\TU/TimesNewRoman(0)/m/n/14.4 , так щоб $[][] \OML/cmm/m/it/14.4 P []$\TU/Tim
+esNewRoman(0)/m/n/14.4 . Нехай $\OML/cmm/m/it/14.4 p[] \OT1/cmr/m/n/14.4 = [][]
+ \OML/cmm/m/it/14.4 P []$\TU/TimesNewRoman(0)/m/n/14.4 .
+ []
+
+[17]
+File: img/model_plot.pdf Graphic file (type pdf)
+<use img/model_plot.pdf>
+ [18]
+File: img/plot_50000.pdf Graphic file (type pdf)
+<use img/plot_50000.pdf>
+File: img/plot_90000.pdf Graphic file (type pdf)
+<use img/plot_90000.pdf>
+ [19]
+Overfull \hbox (10.71027pt too wide) in paragraph at lines 448--454
+\TU/TimesNewRoman(0)/m/n/14.4 skip follow step outline part two article install
+ mojang account require minecraft gameplay
+ []
+
+[20] [21] (Borukh.bbl)
+Underfull \hbox (badness 2735) in paragraph at lines 478--483
 \TU/TimesNewRoman(0)/m/n/14.4 [Електронний ресурс] / Sharmila Polamuri // dataa
 spirant.com.-2020.- Ре-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--337
+Underfull \hbox (badness 10000) in paragraph at lines 478--483
 \TU/TimesNewRoman(0)/m/n/14.4 жим доступу: https://dataaspirant.com/word-embedd
 ing-techniques-nlp/#t-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--348
+Underfull \hbox (badness 10000) in paragraph at lines 492--494
 []\TU/TimesNewRoman(0)/m/n/14.4 Mahnaz Koupaee, William Yang Wang \TU/TimesNewR
 oman(0)/m/it/14.4 WikiHow: A Large Scale Text
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 367.
-[13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 367.
+
+Underfull \hbox (badness 4266) in paragraph at lines 496--502
+[]\TU/TimesNewRoman(0)/m/n/14.4 Sachin Abeywardana \TU/TimesNewRoman(0)/m/it/14
+.4 Sequence to sequence tutorial \TU/TimesNewRoman(0)/m/n/14.4 [Електроний ресу
+рс]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 496--502
+\TU/TimesNewRoman(0)/m/n/14.4 /Abeywardana Sachin // towardsdatascience.com.-20
+17- Режим доступу:
+ []
+
+
+Underfull \hbox (badness 1365) in paragraph at lines 504--510
+\TU/TimesNewRoman(0)/m/n/14.4 ктроний ресурс] /Brownlee Jason // machinelearnin
+gmastery.com.-2017- Ре-
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 520.
+[22]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 520.
  (Borukh.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 367.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 367.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 520.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 520.
 Package rerunfilecheck Info: File `Borukh.out' has not changed.
-(rerunfilecheck)             Checksum: F1CFF282305AE2ABE2BA9A9C97911897;918.
+(rerunfilecheck)             Checksum: 5CE072356788619A559F1F1EB96F1D87;2087.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 367.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 520.
  ) 
 Here is how much of TeX's memory you used:
- 15192 strings out of 414187
- 274360 string characters out of 2901686
- 602167 words of memory out of 3000000
- 32492 multiletter control sequences out of 15000+200000
+ 15250 strings out of 414187
+ 275559 string characters out of 2901686
+ 603336 words of memory out of 3000000
+ 32541 multiletter control sequences out of 15000+200000
  536271 words of font info for 58 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 45i,12n,82p,1643b,369s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,12n,82p,1652b,369s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Borukh.pdf (13 pages).
+Output written on Borukh.pdf (22 pages).
