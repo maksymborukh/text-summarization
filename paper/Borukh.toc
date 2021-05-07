@@ -23,7 +23,7 @@
 \contentsline {section}{\numberline {7}Тренування моделі}{18}{section.7}%
 \contentsline {section}{\numberline {8}Результати}{20}{section.8}%
 \contentsline {subsection}{\numberline {8.1}Приклади підсумків}{20}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Аналіз отриманих підсумків}{20}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Метрики ROUGE, BLEU}{20}{subsection.8.3}%
-\contentsline {section}{Висновки}{21}{subsection.8.3}%
-\contentsline {section}{Список літератури}{22}{section*.1}%
+\contentsline {subsection}{\numberline {8.2}Аналіз отриманих підсумків}{22}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Метрика ROUGE}{22}{subsection.8.3}%
+\contentsline {section}{Висновки}{24}{table.1}%
+\contentsline {section}{Список літератури}{25}{section*.1}%
