@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 2.9.7380 64-bit) (preloaded format=xelatex 2020.4.2)  7 MAY 2021 16:16
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 2.9.7380 64-bit) (preloaded format=xelatex 2020.4.2)  10 MAY 2021 15:15
 entering extended mode
 **./Borukh.tex
 (Borukh.tex
@@ -771,44 +771,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 205--207
 
  []
 
-[6]
+[6] [7]
 File: img/RNN_unrolled.pdf Graphic file (type pdf)
 <use img/RNN_unrolled.pdf>
- [7] [8]
+ [8] [9]
 File: img/LSTM cell.pdf Graphic file (type pdf)
 <use img/LSTM cell.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--295
-
- []
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 300--301
+Underfull \hbox (badness 10000) in paragraph at lines 290--296
 
  []
 
 [10]
+Underfull \hbox (badness 10000) in paragraph at lines 301--302
+
+ []
+
+[11]
 File: img/dataset_2.pdf Graphic file (type pdf)
 <use img/dataset_2.pdf>
 File: img/text_len_1.pdf Graphic file (type pdf)
 <use img/text_len_1.pdf>
- [11] [12]
+ [12] [13]
 File: img/autoencoder.pdf Graphic file (type pdf)
 <use img/autoencoder.pdf>
 
-Overfull \hbox (7.62253pt too wide) in paragraph at lines 329--334
+Overfull \hbox (10.02254pt too wide) in paragraph at lines 329--334
 \TU/TimesNewRoman(0)/m/n/14.4 модель, яка б надавала таку можливість. ”Послідов
-ність до послідовності”(seq2seq)
+ність до послідовності” (seq2seq)
  []
 
 File: img/One-Shot.pdf Graphic file (type pdf)
 <use img/One-Shot.pdf>
-[13]
+[14]
 File: img/Model-A.pdf Graphic file (type pdf)
 <use img/Model-A.pdf>
 File: img/Model-B.pdf Graphic file (type pdf)
 <use img/Model-B.pdf>
- [14] [15] [16]
+ [15] [16] [17]
 Overfull \hbox (11.74374pt too wide) in paragraph at lines 385--386
 \TU/TimesNewRoman(0)/m/n/14.4 щих $\OML/cmm/m/it/14.4 k$ \TU/TimesNewRoman(0)/m
 /n/14.4 слів $\OML/cmm/m/it/14.4 V[] \OMS/cmsy/m/n/14.4 ^^Z \OML/cmm/m/it/14.4 
@@ -817,10 +817,10 @@ esNewRoman(0)/m/n/14.4 . Нехай $\OML/cmm/m/it/14.4 p[] \OT1/cmr/m/n/14.4 = 
  \OML/cmm/m/it/14.4 P []$\TU/TimesNewRoman(0)/m/n/14.4 .
  []
 
-[17]
+[18]
 File: img/model_plot.pdf Graphic file (type pdf)
 <use img/model_plot.pdf>
- [18]
+ [19]
 File: img/plot_90000.pdf Graphic file (type pdf)
 <use img/plot_90000.pdf>
 File: img/plot_180000.pdf Graphic file (type pdf)
@@ -830,7 +830,7 @@ Overfull \hbox (1.99059pt too wide) in paragraph at lines 436--437
  [][] 
  []
 
-[19]
+[20]
 Underfull \hbox (badness 10000) in paragraph at lines 450--482
 
  []
@@ -898,7 +898,7 @@ Overfull \hbox (5.89856pt too wide) in paragraph at lines 450--482
 e like cold also medication treat variety
  []
 
-[20] [21] [22] [23] [24] (Borukh.bbl)
+[21] [22] [23] [24] [25] (Borukh.bbl)
 Underfull \hbox (badness 2735) in paragraph at lines 554--559
 \TU/TimesNewRoman(0)/m/n/14.4 [Електронний ресурс] / Sharmila Polamuri // dataa
 spirant.com.-2020.- Ре-
@@ -936,7 +936,7 @@ gmastery.com.-2017- Ре-
  []
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 596.
-[25]
+[26]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 596.
  (Borukh.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 596.
@@ -950,12 +950,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 596.
  ) 
 Here is how much of TeX's memory you used:
- 15303 strings out of 414187
- 276293 string characters out of 2901686
+ 15299 strings out of 414187
+ 276225 string characters out of 2901686
  603903 words of memory out of 3000000
- 32591 multiletter control sequences out of 15000+200000
+ 32587 multiletter control sequences out of 15000+200000
  536271 words of font info for 58 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 45i,12n,82p,1652b,369s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,12n,82p,1650b,369s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Borukh.pdf (25 pages).
+Output written on Borukh.pdf (26 pages).
