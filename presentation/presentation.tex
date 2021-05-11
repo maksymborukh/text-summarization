@@ -1,0 +1,247 @@
+\documentclass{beamer}
+
+
+\mode<presentation>
+{
+	\usetheme{Warsaw}
+	\useoutertheme{infolines}
+	\usefonttheme[]{serif}
+	\usecolortheme{whale}
+}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[english,ukrainian]{babel}
+\usepackage[T1, T2A]{fontenc}
+\usepackage{dsfont}
+\usepackage{multirow}
+
+\usepackage{fontspec}
+\setmainfont[
+Ligatures=TeX,
+Extension=.otf,
+BoldFont=cmunbx,
+ItalicFont=cmunti,
+BoldItalicFont=cmunbi,
+]{cmunrm}
+\setsansfont[
+Ligatures=TeX,
+Extension=.otf,
+BoldFont=cmunsx,
+ItalicFont=cmunsi,
+]{cmunss}
+
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{listings}
+\lstset{language=C++,basicstyle=\footnotesize}
+\usepackage{xcolor}
+
+
+
+
+\title[Курсова робота]{Підсумовування текстів за допомогою глибоких нейронних мереж}
+\author[Борух М. І.]{Борух М. І. \\Керівник: Музичук Ю. А. }
+\institute[ЛНУ] 
+{
+	Львівський національний університет імені Івана Франка  \\
+	
+	Факультет прикладної математики та інформатики \\
+	
+	Кафедра обчислювальної математики\\
+	\medskip
+}
+\date{\today}
+
+\begin{document}
+	
+	%------------------------------------------------------------------------
+	
+	\begin{frame}
+		\titlepage 
+	\end{frame}
+	
+	%------------------------------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{Зміст} 
+		\tableofcontents 
+	\end{frame}
+	
+	%------------------------------------------------------------------------
+	
+	\section{Постановка задачі} 
+	\begin{frame}
+		\frametitle{Постановка задачі}
+		\quad Маємо набір текстів $X^{n\times m}$ і їх підсумовані варіанти $Y^{n\times k}$, де $n$ -- кількість даних, $m$ -- довжина тексту, $k$ -- довжина підсумку відповідного запису. Метою тренування мережі є вивчення зв'язків між $X$ та $Y$, так щоб модель максимізувала ймовірність $Y$, з урахуванням $X$:
+		$$
+		\max p(Y \mid X)=\max \prod_{t=1}^{n} p\left(y_{t} \mid y_{<t}, X\right),
+		$$
+		де $y_{<t}$ -- основні ознаки попередніх кроків.
+
+	\end{frame}
+	
+	%------------------------------------------------------------------------
+	
+	\section{Обробка даних} 
+	\begin{frame}
+		\frametitle{Обробка даних}
+		
+		\begin{itemize}
+			\item Токенізація або лексичний аналіз
+			\item Нормалізація 
+			\item Видалення "шуму"
+		\end{itemize}
+		Після застосування попередніх пунктів виконується перетворення тексту у векторне представлення використовуючи ''The Continuous Bag Of Words Model''. Ідея якого перетворити слова у числа так, щоб слова близькі за значенням мали подібне представлення.
+	\end{frame}
+	
+	%------------------------------------------------------------------------
+	
+	\section{Архітектура моделі} 
+	\begin{frame}
+		\frametitle{LSTM клітина}
+		\begin{figure}[h]
+			\centering
+			\begin{minipage}{.5\textwidth}
+				\includegraphics[width=0.5\paperwidth]{img/LSTM cell.pdf}
+				\caption{LSTM клітина}
+			\end{minipage}%
+			\begin{minipage}{.5\textwidth}
+				$$
+				f_{t}=\sigma\left(W_{f} \cdot\left[h_{t-1}, x_{t}\right]+b_{f}\right)
+				$$
+				$$
+				i_{t}=\sigma\left(W_{i} \cdot\left[h_{t-1}, x_{t}\right]+b_{i}\right)
+				$$
+				$$
+				\tilde{C}_{t}=\tanh \left(W_{C} \cdot\left[h_{t-1}, x_{t}\right]+b_{C}\right)
+				$$
+				$$
+				C_{t}=f_{t} * C_{t-1}+i_{t} * \tilde{C}_{t}
+				$$
+				$$
+				o_{t}=\sigma\left(W_{o}\left[h_{t-1}, x_{t}\right]+b_{o}\right) 
+				$$
+				$$
+				h_{t}=o_{t} * \tanh \left(C_{t}\right)
+				$$
+			\end{minipage}
+		\end{figure}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Модель}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.8\paperwidth]{img/autoencoder.pdf}
+			\caption{seq2seq}
+			
+		\end{figure}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Загальна структура}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.8\paperwidth]{img/model_plot.pdf}
+			\caption{Архітектура мережі}
+			
+		\end{figure}
+	\end{frame}
+	
+	%------------------------------------------------------------------------
+	
+	\section{Генерація підсумків} 	
+	\begin{frame}
+		
+		\textbf{Жадібний алгоритм} -- ідея якого полягає в тому, щоб перебрати всі ймовірності й знайти слово якому відповідає найбільша ймовірність і обрати його.
+		
+		\textbf{Променевий пошук} повертає список найбільш ймовірних реченнь.
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.7\paperwidth]{img/beam_search.pdf}
+			\caption{Променевий пошук}
+			
+		\end{figure}
+
+	\end{frame}
+	
+	%------------------------------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{Топ-k прикладів}	
+		\textbf{Топ-k прикладів} -- основна ідея в тому, щоб з ймовірностей передбачених мережею зрізати верхні $k$.
+		
+		Для найкращих $k$ наступних слів (токенів) формується новий словник слів $V^{(k)} \subset V$. Розподіл масштабується за наступним правилом
+		$$
+		P^{\prime}\left(x \mid x_{1: i-1}\right)=\left\{\begin{array}{ll}
+			\frac{P\left(x \mid x_{1: i-1}\right)}{\sum_{x \in V^{(k)}} P\left(x \mid x_{1: i-1}\right)} & \text { якщо } x \in V^{(k)} \\
+			0 & \text { інакше. }
+		\end{array}\right.
+		$$
+		Наступне слово обирається на основі даного розподілу.
+		
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Метод ядер}	
+		\textbf{Метод ядер} -- основна ідея така сама як в топ-k прикладів з тією відмінністю, що інакше формується словник.
+		
+		Для найкращих $p$ наступних слів (токенів) формується новий словник слів $V^{(p)} \subset V$ так, щоб задовольнити наступну умову:
+		$$
+		\sum_{x \in V^{(p)}} P\left(x \mid x_{1: i-1}\right) \geq p
+		$$
+		Далі так само як і в попережньому методі.
+		
+	\end{frame}
+	
+	%------------------------------------------------------------------------
+	
+	\section{Результати}
+	\begin{frame}
+		\frametitle{Результати}	
+		Оригінальний підсумок: know when to seek medical help do not apply direct heat to the person avoid exposure to cold understand who is at risk for take steps to prevent risk\\\
+		Згенерований підсумок:  talk to your doctor about your medications
+		
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|c|c|c|c|c|}
+				\hline
+				&  & f & p & r \\
+				\hline
+				\multirow{3}{*}{ROUGE-1} & Avg & 0.144 & 0.19 & 0.121 \\
+				\cline{2-5}
+				& Max & 0.562 & 0.75 & 0.473 \\
+				\cline{2-5}
+				& Min & 0.0 & 0.0 & 0.0 \\
+				\hline
+				\multirow{3}{*}{ROUGE-L} & Avg & 0.126 & 0.176 & 0.103 \\
+				\cline{2-5}
+				& Max & 0.471 & 0.75 & 0.462 \\
+				\cline{2-5}
+				& Min & 0.0 & 0.0 & 0.0 \\
+				\hline
+			\end{tabular}
+			\caption{ROUGE для підсумків}
+		\end{table}
+	\end{frame}
+
+	
+	%------------------------------------------------------------------------
+	
+	\section{Висновки}
+	\begin{frame}
+		\frametitle{Висновки}	
+		Було побудовано мережу яка вміє підсумовувати текст. Для її побудови було використано LSTM шар через його вміння запам'ятовувати довготривалі залежності. Розглянули різні методи відбору слів для формування підсумку, щоб уникнути феномену виродження тексту. Отримані підсумки оцінили з використанням метрики ROUGE. Хоча і метрика ROUGE показала ненайкращі результати, можна стверджувати що дана мережа робить хороші підсумки.
+	\end{frame}
+	
+	%------------------------------------------------------------------------
+	
+	\section{} 
+	\begin{frame}	
+		\begin{center}
+			\Huge Дякую за увагу
+		\end{center}
+	\end{frame}
+\end{document}
